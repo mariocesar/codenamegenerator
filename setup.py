@@ -2,25 +2,20 @@
 # encoding: utf-8
 """
 A Name generator of the form "Adjetive Noun"
-===========================================
+============================================
 
-Install it by:
-
-::
+Install it by. ::
 
     pip install namegenerator
 
-Use it from the command line
-
-::
+Use it from the command line ::
 
     $ python -m namegenerator
 
-Or in your code
-
-::
+Or in your code ::
 
     from namagenerator import get_random_name
+
 """
 
 from __future__ import unicode_literals
@@ -36,5 +31,13 @@ setup(
     url='https://github.com/mariocesar/namegenerator',
     description='A Name generator of the form "Adjetive Noun"',
     long_description=__doc__,
-    packages=find_packages()
+    packages=find_packages(),
+    platforms='any',
+    classifiers=[
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        # 'Programming Language :: Python :: 3.4'
+    ],
 )
