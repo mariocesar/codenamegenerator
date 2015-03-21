@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-A Name generator of the form "Adjetive Noum"
+A Name generator of the form "Adjetive Noun"
 ===========================================
 
 Install it by:
@@ -34,6 +34,7 @@ setup(
     author='Mario César Señoranis Ayala',
     author_email='mariocesar.c50@gmail.com',
     url='https://github.com/mariocesar/namegenerator',
+    description='A Name generator of the form "Adjetive Noun"',
     long_description=__doc__,
     packages=find_packages()
 )

@@ -1,5 +1,5 @@
 # namegenerator
-A Name generator of the form "Adjetive Noum"
+A Name generator of the form "Adjetive Noun"
 
 Test it by
 
