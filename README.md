@@ -3,7 +3,15 @@ A Name generator of the form "Adjetive Noum"
 
 Test it by
 
-    python -m namegenerator
+    $ python -m namegenerator
+    loving fermi
+    sick engelbart
+    hopeful babbage
+    distracted sinoussi
+    modest swartz
+    compassionate yalow
+    modest pike
+    furious babbage
 
 or
 
@@ -12,5 +20,5 @@ or
 
 ## TODO:
 
-    - [] Choice which collection of nouns and adjectives to use
-    - [] Command line interface with options
+ - [ ] Choice which collection of nouns and adjectives to use
+ - [ ] Command line interface with options
