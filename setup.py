@@ -10,22 +10,21 @@ Install it by. ::
 
 Use it from the command line ::
 
-    $ python -m codenamegenerator
+    $ python -m codenamegenerator --help
 
 Or in your code ::
 
-    from codenamagenerator import get_random_name
+    from codenamegenerator import generate_codenames
+    print(generate_codenames())
 
 """
-
-from __future__ import unicode_literals
 
 from setuptools import setup, find_packages
 
 
 setup(
     name='codenamegenerator',
-    version='1.3',
+    version='2.0.0',
     author='Mario César Señoranis Ayala',
     author_email='mariocesar.c50@gmail.com',
     url='https://github.com/mariocesar/codenamegenerator',
@@ -37,7 +36,9 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4'
+        'Programming Language :: Python :: 3'
+        'Programming Language :: Python :: 3.6'
+        'Programming Language :: Python :: 3.7'
+        'Programming Language :: Python :: 3.8'
     ],
 )

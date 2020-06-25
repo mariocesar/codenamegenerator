@@ -1,23 +1,36 @@
+from typing import List
+
+import csv
 import os
-import time
 import random
-import pkgutil
 
-root_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-
-
-def load_fixtures(dirname):
-    for importer, package_name, _ in pkgutil.iter_modules([os.path.join(root_dir, dirname)]):
-        full_package_name = '%s.%s' % (dirname, package_name)
-        name, module = package_name, importer.find_module(package_name).load_module(full_package_name)
-        yield name, getattr(module, 'export')
-
-adjetives = dict(load_fixtures('adjetives'))
-nouns = dict(load_fixtures('nouns'))
+DICT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dicts")
 
 
-def get_random_name():
-    random.seed(time.time())
-    adjetive = random.choice(adjetives['common'])
-    noun = random.choice(nouns['science'])
-    return '{0} {1}'.format(adjetive, noun)
+def dictionary_sample(name: str, sample: int = 1) -> List[str]:
+    # TODO: Cache counting, and use file.seek to speed file reading.
+
+    fname = os.path.join(DICT_DIR, f"{name}.csv")
+
+    if not os.path.exists(fname):
+        raise ValueError(f"{name} dictionary does not exists.")
+
+    with open(fname, "rt") as csvfile:
+        csvreader = csv.DictReader(
+            csvfile, fieldnames=["NAME"], delimiter=",", quotechar='"'
+        )
+
+        names = [row["NAME"] for row in csvreader]
+
+    return random.sample(names, sample)
+
+
+def generate_codenames(
+    prefix: str = "adjectives",
+    suffix: str = "mobi_notable_scientists_and_hackers",
+    num: int = 1,
+) -> List[str]:
+    prefixes = dictionary_sample(prefix, num)
+    suffixes = dictionary_sample(suffix, num)
+
+    return [f"{prefix} {suffix}" for prefix, suffix in zip(prefixes, suffixes)]

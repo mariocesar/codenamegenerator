@@ -1,6 +1,7 @@
 
 default:
 	pip install -e .
+	pip install wheel
 	pip install twine
 
 release:

@@ -5,17 +5,17 @@ Test it by
 
 ```shell
 $ python -m codenamegenerator 8
-loving fermi
-sick engelbart
-hopeful babbage
-distracted sinoussi
-modest swartz
-compassionate yalow
-modest pike
-furious babbage
+admiring ride
+unruffled williams
+compassionate franklin
+frosty torvalds
+youthful blackwell
+distracted pike
+nostalgic curran
+stoic hopper
 
 $ python -m codenamegenerator --help
-usage: __main__.py [-h] [-c] [-t] [-s] [--prefix PREFIX] [--suffix SUFFIX] [num]
+usage: codenamegenerator [-h] [-c] [-t] [-s] [--prefix PREFIX] [--suffix SUFFIX] num
 
 Code name generator
 
@@ -34,8 +34,8 @@ optional arguments:
 or
 
 ```python
-from codenamegenerator import get_random_name
-print(get_random_name)
+from codenamegenerator import generate_codenames
+print(generate_codenames())
 ```
 ## TODO:
 
