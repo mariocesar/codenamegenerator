@@ -24,7 +24,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="codenamegenerator",
-    version="2.0.0",
+    version="2.1.0",
     author="Mario César Señoranis Ayala",
     author_email="mariocesar.c50@gmail.com",
     url="https://github.com/mariocesar/codenamegenerator",
