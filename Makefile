@@ -9,6 +9,6 @@ release: clean
 	twine upload dist/*
 
 clean:
-	rm -r *.egg-info
-	rm -r dist/
-	rm -r build/
+	rm -fr *.egg-info
+	rm -fr dist/
+	rm -fr build/
