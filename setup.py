@@ -24,13 +24,14 @@ from setuptools import setup, find_packages
 
 setup(
     name="codenamegenerator",
-    version="2.1.0",
+    version="3.0",
     author="Mario César Señoranis Ayala",
     author_email="mariocesar.c50@gmail.com",
     url="https://github.com/mariocesar/codenamegenerator",
     description='A Name generator of the form "Adjetive Noun"',
     long_description=__doc__,
     packages=find_packages(),
+    include_package_data=True,
     platforms="any",
     classifiers=[
         "License :: OSI Approved :: BSD License",
