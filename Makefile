@@ -4,7 +4,7 @@ default:
 	pip install wheel
 	pip install twine
 
-release:
+release: clean
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
 
