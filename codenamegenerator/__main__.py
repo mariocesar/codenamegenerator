@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 from . import get_random_name
 
 

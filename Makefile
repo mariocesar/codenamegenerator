@@ -6,3 +6,8 @@ default:
 release:
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
+
+clean:
+	rm -r *.egg-info
+	rm -r dist/
+	rm -r build/
