@@ -20,7 +20,7 @@ def dictionary_sample(name: str, sample: int = 1) -> List[str]:
             csvfile, fieldnames=["NAME"], delimiter=",", quotechar='"'
         )
 
-        names = [row["NAME"] for row in csvreader]
+        names = [row["NAME"] for row in csvreader if row["NAME"].strip() != ""]
 
     return random.sample(names, sample)
 
